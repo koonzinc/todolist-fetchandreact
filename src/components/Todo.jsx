@@ -3,10 +3,7 @@ import { RiCloseCircleLine } from 'react-icons/ri';
 
 
 const Todo = ({todos, removeTodo}) => {
-    const [edit, setEdit] = useState({
-        id: null,
-        value: ''
-    })
+    
 
     return todos.map((todo, index) => (
         <div className='todo-row' key={index}>
