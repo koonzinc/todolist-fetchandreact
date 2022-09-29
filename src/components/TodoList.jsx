@@ -26,7 +26,7 @@ const TodoList = () => {
         setTodos(newTodos);
     }
 
-    const removeTodo = (todo) => {
+    const removeTodo = (id) => {
 
         fetch('https://assets.breatheco.de/apis/fake/todos/user/koonzinc', {
             method: 'PUT',
