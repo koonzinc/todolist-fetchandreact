@@ -26,8 +26,18 @@ const TodoList = () => {
         setTodos(newTodos);
     }
 
-    const removeTodo = (id) => {
+    const removeTodo = (todo) => {
 
+        fetch('https://assets.breatheco.de/apis/fake/todos/user/koonzinc', {
+            method: 'PUT',
+            body: JSON.stringify(todos),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
 
         const removeArr = [...todos].filter(todo => todo.id !== id)
 
